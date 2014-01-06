@@ -58,12 +58,12 @@
 
 (defun neale-custom-clojure-mode ()
   (neale-custom-lisp-mode)
-  (sw1nn-add-clj-compile-on-save)
+  (catman-add-clj-compile-on-save)
   (hs-minor-mode)
   (define-key clojure-mode-map (kbd "RET") 'electrify-return-if-match)
   (define-key clojure-mode-map (kbd "M-[") 'paredit-wrap-square)
   (define-key clojure-mode-map (kbd "M-{") 'paredit-wrap-curly)
-  (define-key clojure-mode-map (kbd "M-t") 'sw1nn-transpose-words-with-hyphens)
+  (define-key clojure-mode-map (kbd "M-t") 'catman-transpose-words-with-hyphens)
   (set (make-local-variable 'font-lock-extra-managed-props) '(composition)) ; revert fancy characters.
   (set (make-local-variable 'scroll-margin) 3))
 

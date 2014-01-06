@@ -1,3 +1,5 @@
+(message "got into look-and-feel")
+
 (require 'expand-region)
 
 (require 'linum-off)
@@ -34,7 +36,8 @@
 (setq custom-theme-directory (concat user-emacs-directory "themes"))
 
 (ido-mode t)
-(ido-ubiquitous-mode t)
+;(ido-ubiquitous-mode t)
+(ido-everywhere t)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-auto-merge-work-directories-length nil
@@ -102,13 +105,13 @@
 
 (setq-default cursor-type 'bar)
 
-(defun sw1nn-untabify-p ()
+(defun catman-untabify-p ()
   (or (not (equal (file-name-extension (buffer-file-name)) "tsv"))
       (string-match "part-\\d+" (file-name-base (buffer-file-name)))))
 
 (add-hook 'before-save-hook
           (lambda nil
-            (if (sw1nn-untabify-p)
+            (if (catman-untabify-p)
               (untabify (point-min) (point-max))
               (delete-trailing-whitespace))))
 
@@ -116,10 +119,10 @@
 
 ;(powerline-default-theme)
 
-;; allow sw1nn and sw1nn-whiteboard themes.
+;; allow catman and catman-whiteboard themes.
 
-(add-to-list 'custom-safe-themes "898d167bfc865005cf58d782310c99c86440c6f220e3e35b85b4cb630ee38113") ; sw1nn
-(add-to-list 'custom-safe-themes "af4ed275cddf70e5f53cec12ddecdeeb4ced75796e910aee779725ab211aba89") ; sw1nn-whiteboard
+(add-to-list 'custom-safe-themes "898d167bfc865005cf58d782310c99c86440c6f220e3e35b85b4cb630ee38113") ; catman
+(add-to-list 'custom-safe-themes "af4ed275cddf70e5f53cec12ddecdeeb4ced75796e910aee779725ab211aba89") ; catman-whiteboard
 
 ;; this lets us have a .dir-locals.el turning on rainbow-mode for themes.
 (add-to-list 'safe-local-variable-values '(eval rainbow-mode t))
@@ -158,5 +161,5 @@
 (cua-mode 1)
 (setq cua-enable-cua-keys nil)
 
-(load-theme 'sw1nn t)
+(load-theme 'catman t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

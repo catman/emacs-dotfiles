@@ -21,11 +21,11 @@
 
 ;;; Code:
 
-(deftheme sw1nn-whiteboard
+(deftheme catman-whiteboard
   "Face colors similar to markers on a whiteboard.")
 
 (custom-theme-set-faces
- 'sw1nn-whiteboard
+ 'catman-whiteboard
  '(Info-title-1-face ((t (:family "helv" :weight bold :height 1.728))))
  '(Info-title-2-face ((t (:family "helv" :weight bold :height 1.44))))
  '(Info-title-3-face ((t (:family "helv" :weight bold :height 1.2))))
@@ -86,7 +86,7 @@
  '(show-paren-match-face ((t (:background "dodgerblue1" :foreground "white"))))
  '(show-paren-mismatch-face ((t (:background "red1" :foreground "white")))))
 
-(provide-theme 'sw1nn-whiteboard)
+(provide-theme 'catman-whiteboard)
 
 ;; Local Variables:
 ;; no-byte-compile: t

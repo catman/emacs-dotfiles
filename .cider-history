@@ -2,7 +2,7 @@
 ;; Automatically written history of CIDER REPL session
 ;; Edit at your own risk
 
-("(ns clojure-conj-talk.core
+("(start)" "(use 'dev)" "(start)" "(use 'dev)" "(start)" "(use 'dev)" "(usee 'dev)" "(quit)" "(start)" "(use 'dev)" "(start)" "(use 'dev)" "(start)" "(use 'dev)" "(start)" "(use 'dev)" "(start)" "(defn callback-service [arg1 arg2 callback-fn])" "(ns clojure-conj-talk.core
   (:refer-clojure :exclude [map reduce into partition partition-by take merge])
   (:require [clojure.core.async :refer :all :as async]
             [clojure.pprint :refer [pprint]]

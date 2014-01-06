@@ -28,7 +28,6 @@
 (let ((user-info "~/.emacs.d/.user-info"))
   (when (file-exists-p user-info)
     (load user-info)))
-
 (dolist
     (config (directory-files (concat user-emacs-directory "conf.d") t "\\w+\\.el\\'"))
   (unwind-protect

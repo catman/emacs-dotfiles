@@ -1,4 +1,4 @@
-(deftheme sw1nn
+(deftheme catman
   "Created 2013-03-25.")
 
 (custom-theme-set-faces

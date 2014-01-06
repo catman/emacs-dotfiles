@@ -34,6 +34,11 @@
 (define-key my-keys-minor-mode-map (kbd "C-x C-o") (lambda nil (interactive) (other-window 2))) ;; forward two
 
 (define-key my-keys-minor-mode-map (kbd "C-`") 'cider-eval-expression-at-point-in-repl)
+(define-key my-keys-minor-mode-map (kbd "M-5") 'describe-thing-in-popup)
+;(define-key my-keys-minor-mode-map (kbd "M-3") (lambda nil (interactive) (insert-string "#")))
+
+(fset 'insertPound "#")
+(global-set-key (kbd "M-3") 'insertPound)
 
 ;; If you want to be able to M-x without meta (phones, etc)
 (define-key my-keys-minor-mode-map (kbd "C-c x") 'execute-extended-command)
@@ -66,13 +71,13 @@
 (define-key my-keys-minor-mode-map (kbd "M-/") 'hippie-expand)
 (define-key my-keys-minor-mode-map (kbd "C-c M-i") 'idle-highlight-mode)
 
-(define-key my-keys-minor-mode-map (kbd "<f9>") 'sw1nn-toggle-clj-compile-on-save)
-(define-key my-keys-minor-mode-map (kbd "<f10>") 'sw1nn-toggle-cider-repl-popup-stacktraces)
-(define-key my-keys-minor-mode-map (kbd "<f11>") 'sw1nn-toggle-fullscreen)
-(define-key my-keys-minor-mode-map (kbd "C-c c z") 'sw1nn-cider-perspective)
-(define-key my-keys-minor-mode-map (kbd "C-c c r") 'sw1nn-cider-reset)
-(define-key my-keys-minor-mode-map (kbd "C-c c k") 'sw1nn-clear-current-server-buffer)
-(define-key my-keys-minor-mode-map (kbd "C-c c >") 'sw1nn-show-maximum-output-current-server-buffer)
+(define-key my-keys-minor-mode-map (kbd "<f9>") 'catman-toggle-clj-compile-on-save)
+(define-key my-keys-minor-mode-map (kbd "<f10>") 'catman-toggle-cider-repl-popup-stacktraces)
+(define-key my-keys-minor-mode-map (kbd "<f11>") 'catman-toggle-fullscreen)
+(define-key my-keys-minor-mode-map (kbd "C-c c z") 'catman-cider-perspective)
+(define-key my-keys-minor-mode-map (kbd "C-c c r") 'catman-cider-reset)
+(define-key my-keys-minor-mode-map (kbd "C-c c k") 'catman-clear-current-server-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-c c >") 'catman-show-maximum-output-current-server-buffer)
 (define-key my-keys-minor-mode-map (kbd "C-c a") 'org-agenda)
 (define-key my-keys-minor-mode-map (kbd "C-c f") 'fold-dwim-toggle)
 
