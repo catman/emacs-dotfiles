@@ -1,3 +1,11 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/david/.ido.last" . 8672)
- ("/Users/david/.recentf" . 513))
+(("/Users/david/.emacs.d/elpa/archives/gnu/archive-contents" . 14321)
+ ("/Users/david/.emacs.d/elpa/archives/marmalade/archive-contents" . 83849)
+ ("/Users/david/.emacs.d/elpa/archives/melpa/archive-contents" . 268102)
+ ("/Users/david/.emacs.d/elpa/fuzzy-match-20131226.1850/fuzzy-match-autoloads.el" . 1508)
+ ("/Users/david/.emacs.d/url/cookies" . 507)
+ ("/Users/david/.ido.last" . 12086)
+ ("/Users/david/.recentf" . 1256)
+ ("/Users/david/projects/clojure/enlive-tutorial/src/tutorial/scrape1.clj" . 276)
+ ("/Users/david/projects/clojure/enlive-tutorial/src/tutorial/utils.clj" . 918)
+ ("/Users/david/projects/clojure/pedestal-projects/app-tutorial/tutorial-client/app/src/tutorial_client/behavior.clj" . 907))

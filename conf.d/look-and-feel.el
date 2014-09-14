@@ -1,5 +1,3 @@
-(message "got into look-and-feel")
-
 (require 'expand-region)
 
 (require 'linum-off)
@@ -103,7 +101,7 @@
 ;; die tabs, DIE!
 (setq indent-tabs-mode nil)
 
-(setq-default cursor-type 'bar)
+(setq-default cursor-type 'box)
 
 (defun catman-untabify-p ()
   (or (not (equal (file-name-extension (buffer-file-name)) "tsv"))

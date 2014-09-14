@@ -19,9 +19,16 @@
 ;; (when (memq window-system '(mac ns))
 ;;   (exec-path-from-shell-initialize))
 
-(package-initialize)
-  
 ;;(x-focus-frame t)
+
+(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
+(require 'textmate)
+(add-to-list 'load-path "~/.emacs.d/vendor/")
+(require 'peepopen)
+
+(package-initialize)
+
+(textmate-mode)
 
 (setq custom-file (concat user-emacs-directory "conf.d/customize.el"))
 

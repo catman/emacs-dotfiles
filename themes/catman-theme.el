@@ -2,7 +2,7 @@
   "Created 2013-03-25.")
 
 (custom-theme-set-faces
- 'sw1nn
+ 'catman
  '(compilation-column-number ((t (:foreground "#a57705") :inherit font-lock-doc-face)))
  '(compilation-error ((t (:underline (:color "#8b0000" :style wave)))))
  '(compilation-info ((t (:underline (:color "#008b00" :style wave)))))

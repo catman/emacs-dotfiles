@@ -10,6 +10,8 @@
   :type 'boolean
   :group 'catman)
 
+(message "into catmal.el <<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+
 (defun cider-eval-expression-at-point-in-repl ()
   (interactive)
   (let ((form (cider-sexp-at-point)))
@@ -21,6 +23,8 @@
     (insert form)
     (cider-repl-return)))
 
+;; http://blog.jenkster.com/2013/12/popup-help-in-emacs-lisp.html
+(require 'popup)
 (defun describe-thing-in-popup ()
   (interactive)
   (let* ((thing (symbol-at-point))
@@ -35,7 +39,7 @@
                :height 30
                :scroll-bar t
                :margin t)))
-(help-xref-following t)
+;;(help-xref-following t)
 
 ;; http://stackoverflow.com/questions/92971/how-do-i-set-the-size-of-emacs-window
 (defun set-frame-size-according-to-resolution ()
@@ -90,7 +94,7 @@
         (backward-sexp))
     (paredit-forward)))
 
-;;Treat hyphens as a word character when transposing words
+;; Treat hyphens as a word character when transposing words
 ;; based on https://github.com/overtone/emacs-live/blob/a7951de9bad6153537f6ee8af46d18bbc2bf0166/packs/dev/clojure-pack/config/clojure-conf.el#L39
 (defvar catman-clojure-mode-with-hyphens-as-word-sep-syntax-table
   (let ((st (make-syntax-table clojure-mode-syntax-table)))
@@ -138,7 +142,7 @@
   (with-current-buffer (catman-nrepl-current-server-buffer)
     (kill-region (point-min) (point-max))))
 
-(defun catman-show-maximum-output-current-server-buffer ()
+(defun catman-show-max§um-output-current-server-buffer ()
   "Show the Maximum output in the current server buffer."
   (interactive)
   (with-current-buffer (catman-nrepl-current-server-buffer)

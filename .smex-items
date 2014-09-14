@@ -1,16 +1,36 @@
 
 ;; ----- smex-history -----
 (
- cd
- 5x5
- arp
- dbx
- dig
- erc
- ert
+ list-packages
+ center-line
+ help
+ magit-status
+ locate
+ customize-group
+ customize
 )
 
 ;; ----- smex-data -----
 (
- 
+ (mark-sexp . 1)
+ (slamhound . 2)
+ (ac-nrepl-popup-doc . 1)
+ (eval-expression . 1)
+ (eval-current-buffer . 1)
+ (erase-buffer . 1)
+ (customize-face . 2)
+ (customize . 4)
+ (imenu . 3)
+ (apropos . 1)
+ (text-scale-decrease . 1)
+ (cider-mode . 11)
+ (package-install . 1)
+ (list-packages . 6)
+ (clean-buffer-list . 1)
+ (ido-mode . 2)
+ (customize-group . 4)
+ (locate . 5)
+ (magit-status . 1)
+ (help . 1)
+ (center-line . 1)
 )

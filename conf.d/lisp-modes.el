@@ -48,7 +48,7 @@
     (newline arg)
     (indent-according-to-mode)))
 
-(defun neale-custom-lisp-mode ()
+(defun catman-custom-lisp-mode ()
   (rainbow-delimiters-mode t)
   (paredit-mode t)
   (flyspell-prog-mode)
@@ -56,8 +56,8 @@
   (show-paren-mode)
   (eldoc-mode))
 
-(defun neale-custom-clojure-mode ()
-  (neale-custom-lisp-mode)
+(defun catman-custom-clojure-mode ()
+  (catman-custom-lisp-mode)
   (catman-add-clj-compile-on-save)
   (hs-minor-mode)
   (define-key clojure-mode-map (kbd "RET") 'electrify-return-if-match)
@@ -67,17 +67,17 @@
   (set (make-local-variable 'font-lock-extra-managed-props) '(composition)) ; revert fancy characters.
   (set (make-local-variable 'scroll-margin) 3))
 
-(defun neale-custom-cider-mode ()
-  (neale-custom-lisp-mode))
+(defun catman-custom-cider-mode ()
+  (catman-custom-lisp-mode))
 
-(defun neale-custom-inferior-lisp-mode ()
-  (neale-custom-lisp-mode))
+(defun catman-custom-inferior-lisp-mode ()
+  (catman-custom-lisp-mode))
 
-(add-hook 'cider-repl-mode-hook 'neale-custom-cider-mode)
-(add-hook 'lisp-mode-hook 'neale-custom-lisp-mode)
-(add-hook 'emacs-lisp-mode-hook 'neale-custom-lisp-mode)
-(add-hook 'clojure-mode-hook 'neale-custom-clojure-mode)
-(add-hook 'inferior-lisp-mode-hook 'neale-custom-inferior-lisp-mode)
+(add-hook 'cider-repl-mode-hook 'catman-custom-cider-mode)
+(add-hook 'lisp-mode-hook 'catman-custom-lisp-mode)
+(add-hook 'emacs-lisp-mode-hook 'catman-custom-lisp-mode)
+(add-hook 'clojure-mode-hook 'catman-custom-clojure-mode)
+(add-hook 'inferior-lisp-mode-hook 'catman-custom-inferior-lisp-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (put-clojure-indent 'go-loop 'defun)

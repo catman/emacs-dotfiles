@@ -81,18 +81,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-c a") 'org-agenda)
 (define-key my-keys-minor-mode-map (kbd "C-c f") 'fold-dwim-toggle)
 
-;;(when (eq system-type 'darwin)
-;;  (load-file (concat user-emacs-directory "conf.d/google-music-key-bodge.el")))
-
-(if (fboundp 'music-prev-song)
-    (define-key my-keys-minor-mode-map (kbd "<f7>") 'music-prev-song))
-(if (fboundp 'music-play-pause)
-    (define-key my-keys-minor-mode-map (kbd "<f8>") 'music-play-pause))
-(if (fboundp 'music-prev-song)
-    (define-key my-keys-minor-mode-map (kbd "<f9>") 'music-next-song))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
   t " my-keys" 'my-keys-minor-mode-map)
